@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:127.0.0.1:27017', {
+mongoose.connect('mongodb://rootadmin:1234@localhost:27017/?authMechanism=DEFAULT&authSource=admin', {
 	useNewUrlParser: true, 
 	useUnifiedTopology: true 
 }).then(() => console.log("Connected to MongoDB")).catch(console.error);
